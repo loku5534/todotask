@@ -1,24 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
+import { Container, Row , Col} from 'react-bootstrap';
+import TaskForm from './components/TaskForm';
+import TasksList from './components/TasksList';
+import { useState } from 'react';
 
 function App() {
+  const [tasks, setTasks] = useState([]);
+  const addNewTask = (task) => {
+    setTasks([...tasks, task]);
+  }
+  const deleteTask = (index) => {
+    const filteredTasks = tasks.filter((task, i) => {
+      if(index === i){
+        return false;
+      }
+      return true;
+    });
+    setTasks(filteredTasks);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Row>
+        <Col md="8" className='mx-auto py-5'>
+          <TaskForm handler={addNewTask}/>
+          <TasksList tasks={tasks} deleteHandler={deleteTask}/>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
