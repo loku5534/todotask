@@ -17,7 +17,7 @@ function TaskForm({handler}) {
             <Form onSubmit={submit}>
                 <Row>
                     <Col md="12">
-                        <h1>Todo App</h1>
+                        <h1>Todo Application</h1>
                     </Col>
                     <Col md='8'>
                         <Form.Control type="text" placeholder="Add Task" value={task} onChange={(e) => setTask(e.target.value)}/>
