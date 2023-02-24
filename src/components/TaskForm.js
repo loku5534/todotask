@@ -26,6 +26,7 @@ function TaskForm({handler}) {
                         <Button type="submit" variant="primary">Add Task</Button>
                     </Col>
                 </Row>
+                <h6>© 2023 By Total Home App | All Rights Reserved</h6>
             </Form>
     )
 }
