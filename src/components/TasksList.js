@@ -25,6 +25,7 @@ function TasksList({tasks, deleteHandler}) {
                                             <div className='d-flex'>
                                                 <Button variant='success' className='me-2' onClick={() => setModalShow(true)}>Edit</Button>
                                                 <Button variant='danger' onClick={() => deleteTask(i)}>Delete</Button>
+                                                <Button variant='primary' className='me-2' onClick={() => deleteTask(i)}>Help</Button>
                                             </div>
                                         </div>
                                     </Card.Body>
