@@ -26,7 +26,7 @@ function TaskForm({handler}) {
                         <Button type="submit" variant="primary">Add Task</Button>
                     </Col>
                 </Row>
-                <h6>© 2023 By Baldino | All Rights Reserved | Fateh Don</h6>
+                <h6>© 2023 By Baldino | All Rights Reserved | Fateeh Don</h6>
             </Form>
     )
 }
