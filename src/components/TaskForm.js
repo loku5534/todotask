@@ -23,7 +23,7 @@ function TaskForm({handler}) {
                         <Form.Control type="text" placeholder="Add Task" value={task} onChange={(e) => setTask(e.target.value)}/>
                     </Col>
                     <Col md='4'>
-                        <Button type="submit" variant="primary">Add New Task</Button>
+                        <Button type="submit" variant="primary">Add Task</Button>
                     </Col>
                 </Row>
                 <h6>© 2023 By Baldino | All Rights Reserved | Fateeh Don</h6>
